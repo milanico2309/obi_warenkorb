@@ -1,0 +1,23 @@
+### Fügt dem Warenkorb 10 "Schrauben" hinzu
+PUT http://localhost:8080/addArtikel?id=001&amount=10
+
+### Fügt dem Warenkorb die Mindestzahl "Schrauben" hinzu, da die Anzahl 3 die Mindestmenge unterschreitet.
+PUT http://localhost:8080/addArtikel?id=001&amount=3
+
+### Fügt dem Warenkorb 10 "Dübel" hinzu
+PUT http://localhost:8080/addArtikel?id=002&amount=10
+
+### Der Warenkorb wird angezeigt, um das Ergebniss der vorherigen Requests zu validieren.
+GET http://localhost:8080/getWarenkorb
+
+### Die "Schrauben" werden aus dem Warenkorb entfernt
+DELETE http://localhost:8080/removeArtikel?id=001
+
+### Der Warenkorb wird erneut angezeigt, um das Ergebniss der vorherigen Requests zu validieren.
+GET http://localhost:8080/getWarenkorb
+
+### Der gesamte Warenkorb wird gelehrt
+DELETE http://localhost:8080/clearWarenkorb
+
+### Der Warenkorb wird erneut angezeigt, um das Ergebniss der vorherigen Requests zu validieren.
+GET http://localhost:8080/getWarenkorb
